@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide Bolt badge / watermark */
+a[href*="bolt.new"],
+div[class*="bolt"],
+iframe[src*="bolt.new"],
+a[href*="bolt.new"] *,
+div[class*="bolt"] *,
+/* catch fixed-position bottom-left badge containers */
+div[style*="position: fixed"][style*="bottom"],
+div[style*="position:fixed"][style*="bottom"],
+span[class*="bolt"],
+button[class*="bolt"],
+img[src*="bolt"],
+img[alt*="bolt" i],
+svg + a[href*="bolt.new"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
